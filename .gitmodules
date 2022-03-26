@@ -1,0 +1,6 @@
+[submodule "ar_page"]
+	path = ar_page
+	url = git@github.com:crypto-mandala/LGGrowAR.git
+[submodule "xr_pagge"]
+	path = xr_pagge
+	url = git@github.com:crypto-mandala/LGGrowXR.git
