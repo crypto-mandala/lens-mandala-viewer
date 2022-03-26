@@ -16,6 +16,15 @@
       },
       "url": "https://package.openupm.com"
     },
+    "com.de-panther.webxr-interactions": {
+      "version": "0.14.1-preview",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.de-panther.webxr": "0.14.0-preview"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.neuecc.unirx": {
       "version": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
       "depth": 0,
