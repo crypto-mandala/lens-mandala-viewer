@@ -2,6 +2,7 @@
 
 This is a viewer for the lens-mandala project.
 
-You can access [here](https://crypto-mandala.github.io/lens-mandala-viewer/).
 
-
+There is a page to play 
+- [AR](https://crypto-mandala.github.io/LGGrowAR/)
+- [VR](https://crypto-mandala.github.io/LGGrowXR/)
