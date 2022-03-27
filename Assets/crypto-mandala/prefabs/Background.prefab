@@ -118,9 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forceLevel: 0
-  _level: 0
   _blossomPrefabs:
-  - {fileID: 1450315785164548466, guid: 926aa33b91d558d4ea141f74ab123d3b, type: 3}
   - {fileID: 1788786348551336798, guid: 430fdf297ac3d2346b9882ac461a7abf, type: 3}
   - {fileID: 9084439061954314875, guid: 467f916a46e587640b1ffb65dfcfe6f5, type: 3}
   - {fileID: 5229459457327371902, guid: 431cccd1660e50241873169df77acb77, type: 3}
@@ -128,6 +126,7 @@ MonoBehaviour:
   - {fileID: 2213023680237337938, guid: a4f76933ac03dbe47ab76fc4095be89c, type: 3}
   - {fileID: 6498204189371277849, guid: c6181c88855f4424cb3cec4825a59e77, type: 3}
   - {fileID: 727397631707499608, guid: ae03ae767ea29e44fa1561f4b19bf7db, type: 3}
+  - {fileID: 1450315785164548466, guid: 926aa33b91d558d4ea141f74ab123d3b, type: 3}
   _blossomParent: {fileID: 6316624021758486476}
 --- !u!1001 &1038607974041325134
 PrefabInstance:

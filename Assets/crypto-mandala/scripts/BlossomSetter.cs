@@ -33,8 +33,11 @@ namespace CryptoMandala
             var spawnNum = _data.SeedLevel() > 7
                 ? 7
                 : _data.SeedLevel() - 1;
+
+            var i = _forceLevel ? _level = +1 : spawnNum;
+            i = i > 8 ? 8 : i;
             
-            _blossom = Instantiate(_blossomPrefabs[_forceLevel ? _level =+ 1 : spawnNum], _blossomParent);
+            _blossom = Instantiate(_blossomPrefabs[i], _blossomParent);
             _blossom.transform.localPosition = Vector3.zero;
             _blossom.transform.localScale = Vector3.one;
             
