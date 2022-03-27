@@ -7,35 +7,35 @@ using UnityEngine;
 
 namespace CryptoMandala
 {
-    public class LensProtocolSingleton : SingletonMonoBehaviour<LensProtocolSingleton>
+    public class LensProtocolSingleton
     {
         // example https://lens-mandala.vercel.app/api/neo4j/seed/0x41db8e68b817abe104cced933c9d8c5030ba1879/1
-        string _address = "0x41db8e68b817abe104cced933c9d8c5030ba1879";
+        public string Address { get; private set; } = "0x41db8e68b817abe104cced933c9d8c5030ba1879";
+        
         string _hostUri = "https://lens-mandala.vercel.app";
-        string PostUri() => $"{_hostUri}/api/neo4j/seed/{_address}/1";
-
+        string PostUri() => $"{_hostUri}/api/neo4j/seed/{Address}/1";
         
-        public LensProtocol LensProtocolData;
+        public LensProtocol LensProtocolData { get; private set; }= new LensProtocol();
         
+        public static LensProtocolSingleton Instance = new LensProtocolSingleton();
         
-        void Start()
+        LensProtocolSingleton()
         {
-            SetEndTime();
+            UpdateData();
         }
-
-        void SetEndTime()
-        {
-            UniTask.Run(async () => await GetHttp() );
-        }
-
+        
         public void SetAddress(string address)
         {
-            _address = address;
-            Debug.Log($"Set NFT address: {_address}");
+            Address = address;
+            Debug.Log($"Set NFT address: {Address}");
         }
 
+        public void UpdateData()
+        {
+            UniTask.Run(async () => await GetHttpAsync() );
+        }
 
-        async UniTask<bool> GetHttp()
+        async UniTask<bool> GetHttpAsync()
         {
             var request = WebRequest.CreateHttp(PostUri());
             request.Method = "GET";
