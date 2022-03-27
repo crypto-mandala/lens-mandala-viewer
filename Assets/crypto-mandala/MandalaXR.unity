@@ -2152,6 +2152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1452054345}
     m_Modifications:
+    - target: {fileID: 904044366277019572, guid: d9d9a85664160cf448626bb55d38dfe1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 7166615067648505931, guid: d9d9a85664160cf448626bb55d38dfe1, type: 3}
       propertyPath: m_Name
       value: Background
