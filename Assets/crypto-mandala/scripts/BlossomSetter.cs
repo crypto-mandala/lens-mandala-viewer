@@ -7,7 +7,7 @@ namespace CryptoMandala
     public sealed class BlossomSetter : MonoBehaviour
     {
         [SerializeField] bool _forceLevel = false;
-        [SerializeField] int _level = 0;
+        int _level = 0;
         [SerializeField] GameObject[] _blossomPrefabs;
 
         [SerializeField] Transform _blossomParent;
@@ -20,12 +20,11 @@ namespace CryptoMandala
         {
             LensProtocolSingleton.Instance.Loaded
                 .ObserveEveryValueChanged(v=>v.Value)
-                .Where(x => x)
                 .SubscribeOnMainThread()
-                .Subscribe(_ =>
+                .Subscribe(on =>
                 {
-                    Destroy(_blossom);
-                    SetUp();
+                    if(on) SetUp();
+                    else Destroy(_blossom);
                 }).AddTo(this);
         }
 
@@ -35,7 +34,7 @@ namespace CryptoMandala
                 ? 7
                 : _data.SeedLevel() - 1;
             
-            _blossom = Instantiate(_blossomPrefabs[_forceLevel ? _level : spawnNum], _blossomParent);
+            _blossom = Instantiate(_blossomPrefabs[_forceLevel ? _level =+ 1 : spawnNum], _blossomParent);
             _blossom.transform.localPosition = Vector3.zero;
             _blossom.transform.localScale = Vector3.one;
             
