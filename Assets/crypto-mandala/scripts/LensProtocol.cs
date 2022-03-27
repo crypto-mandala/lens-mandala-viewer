@@ -14,7 +14,8 @@ namespace CryptoMandala
         int _level = 0;
         public int SeedLevel()
         {
-            _level = profileCount * postCount * mirrorCount * collectCount;
+            var l = profileCount * postCount * mirrorCount * collectCount *0.1f;
+            _level = (int)Math.Round(l);
             
             return _level == 0 ? 1 : _level;
         }
