@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine.UI;
 
 namespace CryptoMandala
 {
@@ -11,7 +10,21 @@ namespace CryptoMandala
         public int postCount;
         public int mirrorCount;
         public int collectCount;
+
+        int _level = 0;
+        public int SeedLevel()
+        {
+            _level = profileCount * postCount * mirrorCount * collectCount;
+            
+            return _level == 0 ? 1 : _level;
+        }
         
+        public int SocialLevel()
+        {
+            var l = mirrorCount * profileCount;
+            return l == 0 ? 1 : l;
+        }
+
         public DateTime GetMintedDate()
         {
             return DateTime.Parse(timestamp_minted);

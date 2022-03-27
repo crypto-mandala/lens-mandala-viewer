@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &314335383279277530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6316624021758486476}
+  m_Layer: 0
+  m_Name: SpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6316624021758486476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314335383279277530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7166615067648505932}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &558480589709303054
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7166615067648505932}
+  - component: {fileID: 3969634375025407688}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -202,9 +234,25 @@ Transform:
   - {fileID: 7166615068603984421}
   - {fileID: 7166615067752621690}
   - {fileID: 4044899989241477108}
+  - {fileID: 6316624021758486476}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3969634375025407688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166615067648505931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1b9b230c68433f9e93a7c910c7ad23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blossomPrefabs:
+  - {fileID: 8064020760893133749, guid: 926aa33b91d558d4ea141f74ab123d3b, type: 3}
+  _blossomParent: {fileID: 6316624021758486476}
 --- !u!1 &7166615067752621688
 GameObject:
   m_ObjectHideFlags: 0
