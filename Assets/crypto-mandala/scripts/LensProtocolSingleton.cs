@@ -2,6 +2,7 @@
 using System.Net;
 using System.Text;
 using Cysharp.Threading.Tasks;
+using UniRx;
 using UnityEngine;
 
 
@@ -19,6 +20,9 @@ namespace CryptoMandala
         
         public static LensProtocolSingleton Instance = new LensProtocolSingleton();
         
+        BoolReactiveProperty _loaded = new BoolReactiveProperty(false);
+        public IReadOnlyReactiveProperty<bool> Loaded => _loaded;
+
         LensProtocolSingleton()
         {
             UpdateData();
@@ -32,7 +36,7 @@ namespace CryptoMandala
 
         public void UpdateData()
         {
-            UniTask.Run(async () => await GetHttpAsync() );
+            UniTask.Run(async () => _loaded.Value = await GetHttpAsync() );
         }
 
         async UniTask<bool> GetHttpAsync()
