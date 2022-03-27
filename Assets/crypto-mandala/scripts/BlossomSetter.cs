@@ -13,14 +13,18 @@ namespace CryptoMandala
         [SerializeField] Transform _blossomParent;
 
         LensProtocol _data => LensProtocolSingleton.Instance.LensProtocolData;
+        
+        GameObject _blossom;
 
         void Start()
         {
             LensProtocolSingleton.Instance.Loaded
                 .ObserveEveryValueChanged(v=>v.Value)
                 .Where(x => x)
+                .SubscribeOnMainThread()
                 .Subscribe(_ =>
                 {
+                    Destroy(_blossom);
                     SetUp();
                 }).AddTo(this);
         }
@@ -31,9 +35,11 @@ namespace CryptoMandala
                 ? 7
                 : _data.SeedLevel() - 1;
             
-            var tree = Instantiate(_blossomPrefabs[_forceLevel ? _level : spawnNum], _blossomParent);
+            _blossom = Instantiate(_blossomPrefabs[_forceLevel ? _level : spawnNum], _blossomParent);
+            _blossom.transform.localPosition = Vector3.zero;
+            _blossom.transform.localScale = Vector3.one;
             
-            Debug.Log($"spawned num: {spawnNum} = {tree.name}");
+            Debug.Log($"spawned num: {spawnNum} = {_blossom.name}");
 
             // tree.gameObject.transform.localScale = Vector3.one * 0.1f * _data.SocialLevel();
         }

@@ -33,10 +33,15 @@ namespace CryptoMandala
             Address = address;
             Debug.Log($"Set NFT address: {Address}");
         }
-
+        
+        
         public void UpdateData()
         {
-            UniTask.Run(async () => _loaded.Value = await GetHttpAsync() );
+            UniTask.Run(async () =>
+            {
+                _loaded.Value = false;
+                return _loaded.Value = await GetHttpAsync();
+            });
         }
 
         async UniTask<bool> GetHttpAsync()
