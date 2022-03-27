@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 namespace CryptoMandala
 {
+    [Serializable]
     public class LensProtocol
     {
         public string timestamp_minted;
