@@ -12,13 +12,15 @@ namespace CryptoMandala
 
         void Start()
         {
-            var tree = Instantiate(
-                _blossomPrefabs[_data.SeedLevel() > 7
-                    ? 7
-                    : _data.SeedLevel()],
-                _blossomParent);
+            var spawnNum = _data.SeedLevel() > 7
+                ? 7
+                : _data.SeedLevel() - 1;
+            
+            var tree = Instantiate(_blossomPrefabs[spawnNum], _blossomParent);
+            
+            Debug.Log($"spawned num: {spawnNum} = {tree.name}");
 
-            tree.gameObject.transform.localScale = Vector3.one * 0.1f * _data.SocialLevel();
+            // tree.gameObject.transform.localScale = Vector3.one * 0.1f * _data.SocialLevel();
         }
     }
 }
