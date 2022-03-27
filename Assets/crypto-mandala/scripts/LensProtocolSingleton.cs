@@ -25,12 +25,9 @@ namespace CryptoMandala
 
         void SetEndTime()
         {
-            UniTask.RunOnThreadPool(async () =>
-            {
-                await GetHttp();
-            });
+            UniTask.Run(async () => await GetHttp() );
         }
-        
+
         public void SetAddress(string address)
         {
             _address = address;
