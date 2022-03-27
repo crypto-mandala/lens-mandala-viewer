@@ -526,7 +526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7166615069311113912
 Transform:
   m_ObjectHideFlags: 0
@@ -5338,15 +5338,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4332011955836320, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4332011955836320, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4332011955836320, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4332011955836320, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5390,6 +5390,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4332011955836320, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198057600112343094, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198057600112343094, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198057600112343094, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 199841317562680754, guid: 6011830f7c7761f41852f042e4775dc6, type: 3}
