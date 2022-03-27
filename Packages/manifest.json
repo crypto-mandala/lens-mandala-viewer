@@ -2,6 +2,7 @@
   "dependencies": {
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.de-panther.webxr": "0.14.0-preview",
+    "com.de-panther.webxr-input-profiles-loader": "0.4.0",
     "com.de-panther.webxr-interactions": "0.14.1-preview",
     "com.neuecc.unirx": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
     "com.unity.collab-proxy": "1.15.4",
